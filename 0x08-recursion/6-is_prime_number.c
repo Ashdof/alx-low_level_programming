@@ -12,20 +12,20 @@ int wrapper(int x, int y);
 int is_prime_number(int n)
 {
 	if (n < 0 || n == 1)
-		return (1);
-	else
-		return (wrapper(2, n));
+		return (0);
+
+	return (wrapper(2, n));
 }
 
 /**
  * wrapper - function to determine if number is prime
  * @n: the number
- * @x a test number
+ * @x: a test number
  *
  * Return: compared values
  */
 
-int wrapper (int x, int n)
+int wrapper(int x, int n)
 {
 	if (n == x)
 	{
