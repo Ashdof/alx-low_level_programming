@@ -2,17 +2,15 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - allocate memory using malloc
- * @b: amount of block of memory to allocate
- *
- * Return: the allocated memory
+ * malloc_checked - creates memory allocation
+ * @b: unsigned it
+ * Return: void pointer
  */
 
 void *malloc_checked(unsigned int b)
 {
 	char *p;
 
-	/* allocate memory */
 	p = malloc(b);
 
 	if (p == NULL)
