@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 /**
  * malloc_checked - allocate memory using malloc
@@ -11,7 +10,7 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *memvar;
+	char *memvar;
 
 	/* allocate memory */
 	memvar = malloc(b);
