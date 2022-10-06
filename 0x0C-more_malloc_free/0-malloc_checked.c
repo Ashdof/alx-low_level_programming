@@ -10,12 +10,13 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *memvar;
+	char *p;
 
 	/* allocate memory */
-	memvar = malloc(b);
-	if (memvar == NULL)
+	p = malloc(b);
+
+	if (p == NULL)
 		exit(98);
 
-	return (memvar);
+	return (p);
 }
