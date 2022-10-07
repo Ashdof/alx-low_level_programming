@@ -1,5 +1,5 @@
-0x0C. C - More malloc, free
-This is the 13th lesson of C Programming Language. We progress the lesson with Dynamic Memory Allocation (Malloc) and free.
+0x0B. C - Malloc, free
+This is the 12th lesson of C Programming Language. We progress the lesson with Dynamic Memory Allocation (Malloc) and free.
 
 Dynamic memory allocation is a procedure used to change the size of a data structure at run time. The four libraries that make
 this possible are nalloc, calloc, realloc and free
