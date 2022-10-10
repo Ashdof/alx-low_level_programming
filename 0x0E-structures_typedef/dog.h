@@ -1,23 +1,22 @@
 #include "dog.h"
-#include <stddef.h>
+#include <stdlib.h>
+
 /**
  * init_dog - initialize dog struct
- * @d: struct dog
+ * @d: struct dog to initialise
  * @name: name of dog
  * @age: age of dog
  * @owner: string
+ *
  * Return: NUll or newdog
  */
+
 void *init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	struct dog *newdog;
-
 	if (d == NULL)
-		return (NULL);
+		return;
 
-	newdog = d;
-	newdog->name = name;
-	newdog->age = age;
-	newdog->owner = owner;
-	return (newdog);
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
