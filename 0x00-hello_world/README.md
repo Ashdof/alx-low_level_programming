@@ -3,7 +3,7 @@ In this lesson, we were introduced to the C Programming Language.
 
 We learned about the history of the C Programming Language, about [Dennis MacAlistair Ritchie](https://intranet.alxswe.com/rltoken/YWFrRob_-Yo-_NQikMLI-g), the creator of the language and about [Linus Torvalds](https://en.m.wikipedia.org/wiki/Linus_Torvalds), who created the Linux Kernel.
 
-We were also introduced to the compilation process of the C Language. The process include: ** Preprocessor, Compiler, Assembler and Linker.**
+We were also introduced to the compilation process of the C Language. The process include: Preprocessor, Compiler, Assembler and Linker.
 
 # Reference Materials
 The resources used in this lesson are:
