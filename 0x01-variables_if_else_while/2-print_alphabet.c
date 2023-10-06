@@ -6,7 +6,7 @@
  * description: this program prints the alphabets in lowercase, using
  * the putchar() function
  *
- * return: Always 0 (success)
+ * Return: Always 0 (success)
  */
 
 int main(void)
