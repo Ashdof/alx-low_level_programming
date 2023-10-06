@@ -8,7 +8,7 @@
  * description: this program prints whether a number stored in a
  * variable is positive or negative
  *
- * return: Always 0 (success)
+ * Return: Always 0 (success)
  */
 
 int main(void)
