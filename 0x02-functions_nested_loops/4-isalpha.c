@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - check for alphabet
- * c: The character to check
+ * c - The character to check
  *
  * description: this function checks whether its argument is an
  * alphabet or not
