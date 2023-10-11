@@ -21,7 +21,7 @@ int main(void)
 
 		first = second;
 		second = next;
-		
+
 		if (i == 49)
 			printf("\n");
 		else
