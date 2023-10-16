@@ -1,20 +1,28 @@
 # 0x05. C - Pointers, Arrays and Strings
 In the fifth lesson on low level programming, we were introduced to Arrays, Pointers and Strings.
 
-### Arrays
+## Arrays
 An array is a data structure containing a number of data values all of which have the same type. The values in the array are known as elements. These elements are indexed, starting from zero. An example of an array of type integer with 30 elements is, **int scores[30];**
 
-### Pointers
+## Pointers
 A pointer is simply the address of a variable. A **pointer variable** is a variable that can hold the address of another variable. A pointer variable is declared with the indirection operator, asterick *
 
-### Strings
+## Strings
 A string literal is a sequence of characters enclosed within double quotes. An example is, **"C is fun!"**
 
-## Concepts
+# Concepts
 The concepts covered in this lesson are:
 - [Arrays and Pointers](https://intranet.alxswe.com/concepts/60)
 - [Data Structures](https://intranet.alxswe.com/concepts/120)
 - [Using Docker on WSL and Linux](https://intranet.alxswe.com/concepts/100039)
+
+# General Objectives
+By end of the lesson, we were able to:
+- Define pointers and how to use them
+- Explain arrays and how to use them
+- Differentiate between pointers and arrays
+- Describe how to use strings and how to manipulate them
+- Explain the scope of variables
 
 # Reference Resources
 The reference materials used for this lesson include:
