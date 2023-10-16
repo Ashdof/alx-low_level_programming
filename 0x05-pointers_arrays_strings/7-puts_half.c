@@ -28,13 +28,11 @@ int _strlen(char *str)
 
 void puts_half(char *str)
 {
-	int half, n = _strlen(str);
+	int half = (_strlen(str) - 1) / 2;
 	char *p;
 
-	if ((n % 2) != 0)
-		half = (n - 1) / 2;
-	else
-		half = n / 2;
+	if ((half % 2) == 0)
+		half++;
 
 	p = &str[half];
 	while (*p != '\0')
