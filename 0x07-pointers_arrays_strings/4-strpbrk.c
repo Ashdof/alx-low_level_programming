@@ -5,7 +5,7 @@
  * @s: the string to search
  * @accept: the object to search for
  *
- * description: thia function searches a string for any of a set of
+ * description: this function searches a string for any of a set of
  * bytes
  *
  * Return: a pointer in s that matches one of the bytes in accept,
