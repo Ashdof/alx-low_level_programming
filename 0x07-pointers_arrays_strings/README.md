@@ -3,9 +3,11 @@ In this lesson, we had the opportunity to learn and practice with double pointer
 
 While a pointer is a variable that stores the address of another variable, a double pointer variable stores the address of another pointer.
 
-## General Concepts
-The concepts covered in this lesson are:
-- [Pointers and Arrays](https://intranet.alxswe.com/concepts/60)
+## General Objectives
+At the end of the lesson, we were able to:
+- Define pointers to pointers and how to use them
+- Explain multidimensional arrays and how to use them
+- Identify the most common C standard library functions to manipulate strings
 
 # Reference Resources
 The reference materials used in this lesson are:
