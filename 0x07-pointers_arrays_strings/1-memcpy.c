@@ -7,6 +7,8 @@
  * @n: the size of memory to copy
  *
  * description: this function copies memory area
+ *
+ * Return: a pointer to dest
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
