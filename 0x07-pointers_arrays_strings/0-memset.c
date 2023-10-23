@@ -7,6 +7,8 @@
  * @n: the number of bytes
  *
  * description: this function fills memory area with a constant byte
+ *
+ * Return: a pointer to the memory area
  */
 
 char *_memset(char *s, char b, unsigned int n)
