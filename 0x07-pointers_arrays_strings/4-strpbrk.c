@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strbrk - search a string
+ * _strpbrk - search a string
  * @s: the string to search
  * @accept: the object to search for
  *
