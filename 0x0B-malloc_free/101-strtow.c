@@ -85,7 +85,7 @@ char **strtow(char *str)
 
 		letters = word_end(str + index);
 
-		mem[w] = malloc(sizeof(char) * letters + 1);
+		mem[w] = malloc(sizeof(char) * letters);
 
 		if (mem[w] == NULL)
 		{
