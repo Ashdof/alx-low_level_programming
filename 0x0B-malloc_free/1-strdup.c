@@ -62,7 +62,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	size = _strlen(str);
-	mem = malloc(sizeof(char) * size);
+	mem = malloc(sizeof(char) * size + 1);
 	if (mem == NULL)
 		return (NULL);
 	_strcpy(mem, str);
