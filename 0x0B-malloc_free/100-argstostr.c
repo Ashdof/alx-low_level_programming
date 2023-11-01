@@ -64,7 +64,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
-		size += _strlen(av[i]);
+		size += _strlen(av[i]) + 1;
 	mem = malloc(sizeof(char) * size + 1);
 	if (mem == NULL)
 		return (NULL);
