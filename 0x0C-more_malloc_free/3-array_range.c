@@ -17,11 +17,11 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	size = max - min;
-	mem = malloc(sizeof(int) * size + 1);
+	size = max - min + 1;
+	mem = malloc(sizeof(int) * size);
 	if (mem == NULL)
 		return (NULL);
-	while (j <= max)
+	while (i < size)
 		mem[i++] = j++;
 
 	return (mem);
