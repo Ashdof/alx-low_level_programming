@@ -1,6 +1,14 @@
 #ifndef DOG_HEADER
 #define DOG_HEADER
 
+/** dog_t: a dog struct
+ * @name: name of dog
+ * @age: age of dog
+ * :owner: owner of dog
+ *
+ * description: defines a new dog struct
+ */
+
 struct dog
 {
 	char *name;
@@ -8,12 +16,10 @@ struct dog
 	char *owner;
 };
 
-typedef struct
-{
-	char *name;
-	float age;
-	char *owner;
-} dog_t;
+/** dog_t - define a new struct of type dog
+ */
+typedef struct dog dog_t;
+
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
