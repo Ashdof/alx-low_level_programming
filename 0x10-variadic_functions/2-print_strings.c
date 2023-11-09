@@ -5,6 +5,8 @@
  * @separator: a pointer to the separator
  * @n: the number of parameters passed to the function
  *
+ * description: this function prints a series of strings
+ *
  * Return: nothing
  */
 
