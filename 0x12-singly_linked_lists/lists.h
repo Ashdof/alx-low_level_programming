@@ -24,5 +24,6 @@ int _strlen(char *);
 char *_strcpy(char *, char *);
 
 size_t print_list(const list_t *);
+size_t list_len(const list_t *h);
 
 #endif /* LISTS_H */
