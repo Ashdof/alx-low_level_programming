@@ -28,7 +28,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	for (size = 0; s[size] != '\0'; size++)
 		;
-	
+
 	node->str = s;
 	node->len = size;
 	node->next = NULL;
