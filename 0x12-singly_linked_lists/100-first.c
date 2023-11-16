@@ -1,4 +1,6 @@
-#include "lists.h"
+#include <stdio.h>
+
+void executeBeforeMain(void) __attribute__((constructor));
 
 /**
  * executeBeforeMain - print statment
@@ -11,6 +13,6 @@
 
 void executeBeforeMain(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore ");
-	printf("my house on my back!\n");
+	printf("You're beat! and yet, you must allow,\nI bore "
+		"my house on my back!\n");
 }
