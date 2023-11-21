@@ -20,7 +20,7 @@ typedef struct listint_s
 
 
 /* prototypes of main functions */
-
+size_t print_listint(const listint_t *);
 
 /* prototypes of helper functions */
 int _putchar(char);
