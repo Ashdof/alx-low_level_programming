@@ -22,6 +22,7 @@ typedef struct listint_s
 /* prototypes of main functions */
 size_t print_listint(const listint_t *);
 size_t listint_len(const listint_t *);
+listint_t *add_nodeint(listint_t **, const int);
 
 /* prototypes of helper functions */
 int _putchar(char);
