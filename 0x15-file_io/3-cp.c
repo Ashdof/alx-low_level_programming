@@ -2,6 +2,7 @@
 
 #define BUFFER 1024
 
+void closeFile(int);
 int readFile(char *, char *);
 int writeFile(char *, char *, int);
 
@@ -22,13 +23,18 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO,
+			"Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
 	mem = malloc(sizeof(char) * BUFFER + 1);
 	if (mem == NULL)
-		exit(97);
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 
 	bytes = readFile(argv[1], mem);
 	writeFile(argv[2], mem, bytes);
@@ -54,24 +60,15 @@ int readFile(char *filename, char *buffer)
 	int fd, bytes;
 
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", filename);
-		exit(98);
-	}
-
 	bytes = read(fd, buffer, BUFFER);
-	if (bytes < 0)
+
+	if (fd < 0 || bytes < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", filename);
+		dprintf(STDERR_FILENO,
+			"Error: Can't read from file %s\n", filename);
 		exit(98);
 	}
-
-	if (close(fd) < 0)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
+	closeFile(fd);
 
 	return (bytes);
 }
@@ -93,24 +90,36 @@ int writeFile(char *filename, char *buffer, int size)
 	int fd, bytes;
 
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fd < 0)
-	{
-		dprintf(2, "Error: Can't write to %s\n", filename);
-		exit(99);
-	}
-
 	bytes = write(fd, buffer, size);
-	if (bytes < 0)
+
+	if (fd < 0 || bytes < 0)
 	{
-		dprintf(2, "Error: Can't write to %s\n", filename);
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", filename);
 		exit(99);
 	}
-
-	if (close(fd) < 0)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
+	closeFile(fd);
 
 	return (bytes);
+}
+
+/**
+ * closeFile - close an opened file
+ * @fd: a file descriptor of the opened file
+ *
+ * description: this function closes an opened file
+ *
+ * Return: nothing
+ */
+void closeFile(int fd)
+{
+	int i;
+
+	i = close(fd);
+	if (i == -1)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
