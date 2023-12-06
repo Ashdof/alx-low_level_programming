@@ -35,34 +35,43 @@ int main(int argc, char *argv[])
 
 /**
  * _getline - read a line of string from stream
- * @lineptr: a reference pointer to a space in memory to read data
+ * @s: a reference pointer to a space in memory to read data
  * into
  * @n: a pointer to the maximum length of line
  * @stream: a pointer to the file to read from
  *
  * Return: number of bytes in a line read
  */
-ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
+ssize_t _getline(char **s, size_t *n, FILE *stream)
 {
-	size_t i;
-	int c = 0;
+	size_t i, min = 120;
+	int c, counter = 1;
+	char *mem;
 
-	for (i = 0; c != '\n' && i < *n - 1; i++)
+	mem = malloc(sizeof(char) * (*n) + 1);
+	if (mem == NULL)
+		return (-1);
+
+	if (*n == 0)
+		*n = min;
+
+	for (i = 0; c != '\n' && c != EOF; ++i)
 	{
 		c = getc(stream);
 
-		if (c == EOF)
+		if (i >= *n)
 		{
-			if (i == 0)
-				return (-1);
-			break;
+			*n = min;
+			min *= counter;
+			counter++;
 		}
-		*lineptr[i] = (char) c;
+		mem[i] = c;
 	}
-	
+
 	if (c == '\n')
-		*lineptr[i++] = c;
-	*lineptr[i] = '\0';
+		mem[i] = c;
+	mem[i] = '\0';
+	*s = mem;
 
 	return ((ssize_t) i);
 }
