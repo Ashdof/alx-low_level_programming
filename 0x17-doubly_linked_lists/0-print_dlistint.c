@@ -2,7 +2,7 @@
 
 /**
  * print_dlistint - print all elements of the list
- * @: a pointer to a space in memory where the list is stored
+ * @h: a pointer to a space in memory where the list is stored
  *
  * Return: number of nodes in the list
  */
