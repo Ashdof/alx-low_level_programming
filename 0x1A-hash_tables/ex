@@ -1,0 +1,5 @@
+#!/bin/bash
+
+betty $2
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 $1 $2 -o $3
+./$3
